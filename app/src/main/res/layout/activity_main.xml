@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#BF9191"
+    android:backgroundTint="#FFFFFF"
+    android:fadeScrollbars="false"
+    android:foregroundGravity="center"
+    android:foregroundTint="#FFFFFF"
+    android:scrollbarStyle="outsideInset"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Calculadora Simple"
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Numero1:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/edNum1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Insertar un numero"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Numero 2: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edNum1" />
+
+    <EditText
+        android:id="@+id/edNum2"
+        android:layout_width="383dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Ingresa el numero"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/resul"
+        android:layout_width="370dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="48dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edNum2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="409dp"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="458dp">
+
+        <Button
+            android:id="@+id/multiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:onClick="multiplicar"
+            android:text="X" />
+
+        <Button
+            android:id="@+id/resta"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:onClick="restar"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="75dp"
+            android:layout_height="42dp"
+            android:onClick="hacerOperacion"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="69dp"
+            android:layout_height="46dp"
+            android:onClick="dividir"
+            android:text="/" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
